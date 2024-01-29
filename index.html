@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Search Engine</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        display: none;
+        margin-bottom: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #0066cc;
+        display: block;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enhanced Search Engine</h1>
+
+    <form id="searchForm">
+      <input
+        type="text"
+        name="query"
+        id="searchInput"
+        placeholder="Enter your search"
+      />
+      <input type="submit" value="Search" />
+    </form>
+
+    <ul id="searchResults">
+      <!-- Websites that answer basic questions -->
+      <li>
+        <a href="https://www.google.com/">
+          <img
+            src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+            alt=""
+          />
+          <h2>Google</h2>
+          <p>Search the web for answers</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.quora.com/">
+          <img
+            src="https://qsf.fs.quoracdn.net/-4-images.logo.wordmark_default.svg-26-80245eb3d1.png"
+            alt=""
+          />
+          <h2>Quora</h2>
+          <p>Ask and get answers from the community</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.howstuffworks.com/">
+          <img src="https://static.howstuffworks.com/gif/favicon.ico" alt="" />
+          <h2>HowStuffWorks</h2>
+          <p>Learn how things work</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.answers.com/">
+          <img src="https://www.answers.com/favicon.ico" alt="" />
+          <h2>Answers.com</h2>
+          <p>Get answers to various questions</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.wolframalpha.com/">
+          <img
+            src="https://www.wolframalpha.com/_next/static/images/logo-1584c3033d4b8ebf07336d1b11296650.svg"
+            alt=""
+          />
+          <h2>Wolfram Alpha</h2>
+          <p>Computational knowledge engine</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.britannica.com/">
+          <img
+            src="https://www.britannica.com/wp-content/uploads/2020/09/Britannica-wordmark-1000x416-white-1.png"
+            alt=""
+          />
+          <h2>Encyclopedia Britannica</h2>
+          <p>Explore articles and answers</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.ask.com/">
+          <img
+            src="https://www.ask.com/wp-content/uploads/2020/02/ask-favicon.png"
+            alt=""
+          />
+          <h2>Ask.com</h2>
+          <p>Ask and get answers from the web</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.snopes.com/">
+          <img
+            src="https://www.snopes.com/tachyon/sites/snopes/2019/06/snopes-logo-full.png"
+            alt=""
+          />
+          <h2>Snopes</h2>
+          <p>Fact-checking and debunking myths</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.stackoverflow.com/">
+          <img
+            src="https://cdn.sstatic.net/Sites/stackoverflow/company/Img/logos/so/so-logo.svg?v=a010291124bf"
+            alt=""
+          />
+          <h2>Stack Overflow</h2>
+          <p>Q&A community for programmers</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.reddit.com/r/AskReddit/">
+          <img
+            src="https://www.redditinc.com/assets/images/site/reddit-logo.png"
+            alt=""
+          />
+          <h2>AskReddit (Reddit)</h2>
+          <p>Ask and answer interesting questions</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.howtoforge.com/">
+          <img
+            src="https://www.howtoforge.com/images/howtoforge-logo.png"
+            alt=""
+          />
+          <h2>HowtoForge</h2>
+          <p>Guides and tutorials on various topics</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.askscience.com/">
+          <img
+            src="https://www.askscience.com/assets/askscience-logo-602f0ef0e130cb981468c8c1cf71d5f30b414dfab5971f87ed2eab81a1e7ee2c.png"
+            alt=""
+          />
+          <h2>AskScience</h2>
+          <p>Science questions and answers</p>
+        </a>
+      </li>
+      <!-- Additional websites -->
+      <li>
+        <a href="https://www.nasa.gov/">
+          <img
+            src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
+            alt=""
+          />
+          <h2>NASA</h2>
+          <p>National Aeronautics and Space Administration</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.reddit.com/">
+          <img
+            src="https://www.redditinc.com/assets/images/site/reddit-logo.png"
+            alt=""
+          />
+          <h2>Reddit</h2>
+          <p>The front page of the internet</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://firetranslate.netlify.app/"
+            alt=""
+          />
+          <h2>Fire Translate</h2>
+          <p>Translation website</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.apple.com/">
+          <img
+            src="https://www.apple.com/ac/globalnav/5/en_US/images/globalnav/apple/image_large.svg"
+            alt=""
+          />
+          <h2>Apple</h2>
+          <p>Official website of Apple Inc.</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.amazon.com/">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/800px-Amazon_logo.svg.png"
+            alt=""
+          />
+          <h2>Amazon</h2>
+          <p>Online shopping and more</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/">
+          <img
+            src="https://www.youtube.com/about/static/svgs/icons/brand-resources/YouTube-logo-full_color_light.svg"
+            alt=""
+          />
+          <h2>YouTube</h2>
+          <p>Discover and watch videos</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/800px-Microsoft_logo_%282012%29.svg.png"
+            alt=""
+          />
+          <h2>Microsoft</h2>
+          <p>Official website of Microsoft</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.netflix.com/">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+            alt=""
+          />
+          <h2>Netflix</h2>
+          <p>Watch TV shows & movies online</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/">
+          <img
+            src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+            alt=""
+          />
+          <h2>Instagram</h2>
+          <p>Capture and share moments</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.spotify.com/">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+            alt=""
+          />
+          <h2>Spotify</h2>
+          <p>Music for everyone</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.khanacademy.org/">
+          <img
+            src="https://cdn.kastatic.org/genfiles/topic-icons/icons/acorn_v1_gray.svg"
+            alt=""
+          />
+          <h2>Khan Academy</h2>
+          <p>Free online courses and educational resources</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instructables.com/">
+          <img
+            src="https://www.instructables.com/static/default/img/header-logo.svg"
+            alt=""
+          />
+          <h2>Instructables</h2>
+          <p>Step-by-step guides and tutorials</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.lifehacker.com/">
+          <img
+            src="https://i.kinja-img.com/gawker-media/image/upload/s--adcaXQHG--/c_fill,fl_progressive,g_center,h_80,q_80,w_80/d4fn5b8jw1tw17jgkmky.png"
+            alt=""
+          />
+          <h2>Lifehacker</h2>
+          <p>Tips, tricks, and hacks for daily life</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.wikihow.com/">
+          <img
+            src="https://www.wikihow.com/images_en/thumb/e/e6/Logo_wikiHow_mini.svg/1200px-Logo_wikiHow_mini.svg.png"
+            alt=""
+          />
+          <h2>WikiHow</h2>
+          <p>How-to guides on various topics</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.everydayhealth.com/">
+          <img
+            src="https://www.everydayhealth.com/assets/logos/primary-logo-full.svg"
+            alt=""
+          />
+          <h2>Everyday Health</h2>
+          <p>Health and wellness information</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.howtogeek.com/">
+          <img
+            src="https://www.howtogeek.com/wp-content/uploads/2019/06/cropped-How-To-Geek-Icon.png"
+            alt=""
+          />
+          <h2>How-To Geek</h2>
+          <p>Expert guides on technology and more</p>
+        </a>
+      </li>
+    </ul>
+
+    <script>
+      document
+        .getElementById("searchForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const query = document
+            .getElementById("searchInput")
+            .value.toLowerCase();
+          const resultsContainer = document.getElementById("searchResults");
+          const websites = resultsContainer.getElementsByTagName("li");
+
+          for (let i = 0; i < websites.length; i++) {
+            const website = websites[i];
+            const websiteName = website
+              .querySelector("h2")
+              .textContent.toLowerCase();
+            const websiteDescription = website
+              .querySelector("p")
+              .textContent.toLowerCase();
+
+            if (
+              websiteName.includes(query) ||
+              websiteDescription.includes(query)
+            ) {
+              website.style.display = "block";
+            } else {
+              website.style.display = "none";
+            }
+          }
+        });
+    </script>
+  </body>
+</html>
