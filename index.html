@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/img/canvas.ico" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Fire Enhanced</title>
     <style>
       body {
@@ -70,8 +69,6 @@
         placeholder="Enter your search"
       />
       <input type="submit" value="Search" />
-      <div id="results"></div>
-    <div id="wikipediaResults"></div>
     </form>
 
     <ul id="searchResults">
@@ -1189,57 +1186,6 @@
               website.style.display = "block";
             } else {
               website.style.display = "none";
-              function search() {
-        var searchTerm = document.getElementById("searchTerm").value;
-
-        // Display search results
-        $.ajax({
-          url: "https://api.example.com/search?q=" + searchTerm,
-          method: "GET",
-          success: function (data) {
-            var resultsDiv = document.getElementById("results");
-            resultsDiv.innerHTML = ""; // Clear previous results
-
-            // Display search results
-            for (var i = 0; i < data.length; i++) {
-              resultsDiv.innerHTML += "<p>" + data[i].title + "</p>";
-            }
-          },
-          error: function (err) {
-            console.error("Error fetching search results:", err);
-          },
-        });
-
-        // Fetch and display Wikipedia results
-        $.ajax({
-          url:
-            "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=" +
-            searchTerm,
-          method: "GET",
-          dataType: "jsonp",
-          success: function (data) {
-            var wikipediaResultsDiv =
-              document.getElementById("wikipediaResults");
-            wikipediaResultsDiv.innerHTML = ""; // Clear previous results
-
-            // Display Wikipedia search results
-            if (data.query && data.query.search) {
-              var searchResults = data.query.search;
-              for (var i = 0; i < searchResults.length; i++) {
-                wikipediaResultsDiv.innerHTML +=
-                  "<p><a href='https://en.wikipedia.org/wiki/" +
-                  encodeURIComponent(searchResults[i].title) +
-                  "'>" +
-                  searchResults[i].title +
-                  "</a></p>";
-              }
-            } else {
-              wikipediaResultsDiv.innerHTML =
-                "<p>No Wikipedia results found.</p>";
-            }
-          },
-          error: function (err) {
-            console.error("Error fetching Wikipedia results:", err);
             }
           }
         });
